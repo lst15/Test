@@ -12,8 +12,12 @@ export class UserCtrl {
 
     @ExpressServer.RequestMapping("api/users/register","post")
     async registerUser(request:Request) {
-        const { username, password } = request.body;
-        return await UserCtrl.repository.register(username, password);
+        return await UserCtrl.repository.register(request.body);
+    }
+
+    @ExpressServer.RequestMapping("api/users/login","post")
+    async loginUser(request:Request) {
+        return await UserCtrl.repository.login(request.body);
     }
 
 }
