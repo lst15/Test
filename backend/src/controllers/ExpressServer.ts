@@ -1,12 +1,13 @@
 import express, {Express, Request} from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-
+const cors = require('cors');
 type methods = "get" | "post" | "put" | "delete"
 
 export class ExpressServer {
 
     private static express: Express = express()
+        .use(cors())
         .use(morgan(this.logRequest))
         .use(bodyParser.urlencoded({extended: false}))
         .use(bodyParser.json());
