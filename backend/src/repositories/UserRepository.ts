@@ -11,6 +11,8 @@ export class UserRepository {
                 switch (e.code) {
                     case 11000:
                         return new Error('Username already exists');
+                    default:
+                        return e;
                 }
             }
         }
