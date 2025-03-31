@@ -14,4 +14,10 @@ export class GameCtrl {
     async registerUser(request:Request) {
         return await GameCtrl.repository.save(request.body);
     }
+
+    @ExpressServer.RequestMapping("api/history","get")
+    async getHistory(request:Request){
+        return await GameCtrl.repository.history(request.params.userID)
+    }
+
 }
