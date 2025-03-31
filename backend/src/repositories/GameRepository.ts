@@ -18,7 +18,7 @@ export class GameRepository {
     }
 
     public async history(userID:string) {
-        return await Game.find({ userID: { $type: "string" } }).exec();
+        return await Game.find().exec();
     }
 
 }
