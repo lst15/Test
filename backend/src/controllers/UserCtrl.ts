@@ -10,12 +10,12 @@ export class UserCtrl {
         UserCtrl.repository = injector.getRepository("user");
     }
 
-    @ExpressServer.RequestMapping("api/users/register","post")
+    @ExpressServer.RequestMapping("api/user","post")
     async registerUser(request:Request) {
         return await UserCtrl.repository.register(request.body);
     }
 
-    @ExpressServer.RequestMapping("api/users/login","post")
+    @ExpressServer.RequestMapping("api/user/login","post")
     async loginUser(request:Request) {
         return await UserCtrl.repository.login(request.body);
     }
