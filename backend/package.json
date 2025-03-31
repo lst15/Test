@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development tsx ./Main.ts",
+    "dev": "NODE_ENV=development tsx src/Main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "dependencies": {
     "@types/node": "^22.13.14",
     "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",

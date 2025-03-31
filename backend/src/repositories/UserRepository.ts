@@ -19,7 +19,7 @@ export class UserRepository {
         if(!isPasswordValid) return new Error('Invalid password');
 
         const token = jwt.sign({ id: findOne._id }, Properties.jwtSecret, { expiresIn: '1h' });
-        return {token, userId:findOne._id}
+        return {token, userID:findOne._id}
     }
 
     public async register(user:IUser) {
