@@ -39,6 +39,7 @@ export class ExpressServer {
             descriptor.value = async function (req: Request) {
                 return await originalMethod.call(this, req);
             };
+            // @ts-ignore
             ExpressServer.express[method](`/${endpoint}`, async function (req, res) {
                 const serviceResponse = await descriptor.value(req)
 

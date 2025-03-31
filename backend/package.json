@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development tsx src/Main.ts",
     "start": "NODE_ENV=production node ./dist/src/Main.js",
+    "build": "swc src -d ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,10 +21,13 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.1",
     "morgan": "^1.10.0",
+    "swc": "^1.0.11",
     "tsx": "^3.13.0",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.11.13",
     "@types/express": "^5.0.1",
     "@types/morgan": "^1.9.9"
   }
